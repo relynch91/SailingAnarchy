@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
     window.login = login
     window.signup = signup
-    window.logout = logout 
+    window.logout = logout
+    
     ReactDOM.render(<h1>Welcome to Sailing Anarchy! </h1>, root);
 });
