@@ -11,7 +11,6 @@ class Api::SessionsController < ApplicationController
         else 
             render json: ['Invalid Username or Password']
         end
-
     end
 
     def show
@@ -21,7 +20,7 @@ class Api::SessionsController < ApplicationController
         @user = current_user
         if @user 
             sign_out
-            render {}
+            render json: {}
         else 
             render json: ["Nobody signed in"], status: 404
         end
