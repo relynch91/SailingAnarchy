@@ -6,9 +6,9 @@ class Api::SessionsController < ApplicationController
         )
         if @user
             sign_in!(@user)
-            render '/api/users/show'
+            render JSON: '/api/users/show'
         else 
-            render json: ['Invalid Username or Password'], status: 422
+            render JSON: ['Invalid Username or Password'], status: 422
         end
     end
 
@@ -19,9 +19,9 @@ class Api::SessionsController < ApplicationController
         @user = current_user
         if @user 
             sign_out
-            render json: {}
+            render JSON: {}
         else 
-            render json: ["Nobody signed in"], status: 404
+            render JSON: ["Nobody signed in"], status: 404
         end
     end
 end

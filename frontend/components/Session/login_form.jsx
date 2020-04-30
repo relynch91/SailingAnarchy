@@ -7,7 +7,7 @@ class LoginForm extends React.Component {
             username: "",
             password: "",
         }
-        // this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     update(field) {
@@ -16,16 +16,45 @@ class LoginForm extends React.Component {
         })
     }
     
-    // handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     const user = Object.assign( {}, this.state);
-    //     this.props.processForm(user)
-    // }
+    handleSubmit(e) {
+        // debugger 
+        e.preventDefault();
+        const user = Object.assign( {}, this.state);
+        this.props.processForm(user)
+    }
 
     render() {
         return (
             <div>
-                Log-In Form Motha fucka!
+                <h1>Sign In!</h1>
+                <p>Don't have an account? SIGN UP LINK HERE</p>
+                <form onSubmit={this.handleSubmit}>
+                    <label> Display Name
+                        <br />
+                        <input
+                            type="text"
+                            value={this.state.username}
+                            onChange={this.update('username')}
+                        />
+                    </label><br></br>
+                    <label> Password
+                        <br />
+
+                        <input
+                            type="password"
+                            value={this.state.password}
+                            onChange={this.update('password')}
+                        />
+                    </label><br></br>
+                    <input type="checkbox" id="rememberMe" value="Remember Me"/>
+                    <label for='rememberMe'> Remember me</label><br></br>
+                    
+                    <input type="checkbox" id='checkbox'/>
+                    <label for='checkbox'> Sign in anonymously</label><br></br>
+                    <br/>
+                    <button onClick={this.handleSubmit}>Sign In</button>
+                    <button onSubmit={this.handleSubmit}>Log In Dummy User</button>
+                </form>
             </div>
         )
     }
