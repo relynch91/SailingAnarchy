@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -26,8 +27,10 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div>
+                <Link to="/">Community Home</Link>
                 <h1>Sign In!</h1>
-                <p>Don't have an account? SIGN UP LINK HERE</p>
+                <Link to="/signup">Don't have an account? Sign Up</Link>
+
                 <form onSubmit={this.handleSubmit}>
                     <label> Display Name
                         <br />
@@ -47,10 +50,10 @@ class LoginForm extends React.Component {
                         />
                     </label><br></br>
                     <input type="checkbox" id="rememberMe" value="Remember Me"/>
-                    <label for='rememberMe'> Remember me</label><br></br>
+                    <label htmlFor='rememberMe'> Remember me</label><br></br>
                     
                     <input type="checkbox" id='checkbox'/>
-                    <label for='checkbox'> Sign in anonymously</label><br></br>
+                    <label htmlFor='checkbox'> Sign in anonymously</label><br></br>
                     <br/>
                     <button onClick={this.handleSubmit}>Sign In</button>
                     <button onSubmit={this.handleSubmit}>Log In Dummy User</button>

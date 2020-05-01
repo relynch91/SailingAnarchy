@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SignUpForm extends React.Component {
     constructor(props) {
         super(props),
         this.state = {
             username: "",
-            emailAdress: "",
+            email: "",
             password: "", 
             confirmPassword: "",
             location: "",
@@ -30,8 +31,9 @@ class SignUpForm extends React.Component {
     render() {
         return (
             <div>
+                <Link to="/">Community Home</Link>
                 <h1>Sign Up</h1>
-                <p>Existing User? SIGN IN LINK HERE</p>
+                <Link to="/login">Existing user? Sign in</Link>
                 <form onSubmit={this.handleSubmit}>
                     <label>Display Name
                         <input
@@ -40,11 +42,11 @@ class SignUpForm extends React.Component {
                             onChange={this.update('username')}
                         />
                     </label><br></br>
-                    <label>Email Adress
+                    <label>Email Address
                         <input
                             type="text"
-                            value={this.state.emailAddress}
-                            onChange={this.update('emailAdress')}
+                            value={this.state.email}
+                            onChange={this.update('email')}
                         />
                     </label><br></br>
                     <label>Password
@@ -81,10 +83,10 @@ class SignUpForm extends React.Component {
                         />
                     </label><br></br>
                     <input type="checkbox" id="newsUpdates" />
-                    <label for='newsUpdates'>Send me news and updates</label><br></br>
+                    <label htmlFor='newsUpdates'>Send me news and updates</label><br></br>
 
                     <input type="checkbox" />
-                    <label for='checkbox'> Sign in anonymously</label><br></br>
+                    <label htmlFor='checkbox'> Sign in anonymously</label><br></br>
                     <br />
                     <button onSubmit={this.handleSubmit}>Create my Account</button>
                 </form>

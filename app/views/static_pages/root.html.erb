@@ -1,10 +1,10 @@
-<% if signed_in ? %>
+<% if signed_in? %>
     <script id="bootstrap-current-user" type="text/javascript">
         window.currentUser = <%= render(
-            "api/users/_user.json.jbuilder",
+            "api/users/user.json.jbuilder",
   		user: current_user).html_safe %>
-  </script>
-    <% end %>
+    </script>
+<% end %>
 
 <main id="root">Sailing Anarchy is currently under construction.  Stand-By...</main>
 

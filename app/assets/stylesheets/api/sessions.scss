@@ -1,3 +1,66 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.session-dropdown {
+  overflow: hidden;
+  background-color:#ffffff;
+  font-family: Arial;
+  font-size: 15px;
+ 
+}
+
+.session-dropdown a {
+  float: left;
+  font-size: 12px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.session-dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.session-dropdown .session-dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.personal-greeting a:hover, .session-dropdown:hover .session-dropbtn {
+  background-color: #f5f5f5;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.session-dropdown:hover .dropdown-content {
+  display: block;
+}
