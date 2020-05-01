@@ -5,8 +5,7 @@ class Api::UsersController < ApplicationController
             sign_in!(@user)
             render '/api/users/show'
         else
-            flash[:errors]  = @user.errors.full_messages
-            render './'
+            render json: @user.errors.full_messages, status: 422
         end
     end
 

@@ -4,10 +4,11 @@ import React from 'react';
 import SignUpForm from './sign_up_form';
 
 
-const mapStateToProps = ({ errors }) => ({
-    errors: errors.session,
+const mapStateToProps = ({ errors }) => {
+    return {errors: errors.sessionErrors,
     formType: 'signup'
-})
+    }
+}
 
 const mapDispatchToProps = dispatch => ({
     processForm: (user) => dispatch(signup(user)),

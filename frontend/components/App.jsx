@@ -10,7 +10,7 @@ const App = () => (
     <div>
         <Switch>
             <AuthRoute path='/login' component={LoginFormContainer} />
-            <Route path='/signup' component={SignupFormContainer} />
+            <AuthRoute path='/signup' component={SignupFormContainer} />
             <Route path='/' component={GreetingContainer}/>
         </Switch>
     </div>
