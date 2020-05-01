@@ -6,11 +6,9 @@ class Api::UsersController < ApplicationController
             render '/api/users/show'
         else
             flash[:errors]  = @user.errors.full_messages
-            render '/api/users/show'
+            render './'
         end
     end
-
-
 
     def show
 
@@ -19,7 +17,7 @@ class Api::UsersController < ApplicationController
     private 
 
     def user_params
-        params.require(:user).permit(:username, :password, :email) 
+        params.require(:user).permit(:username, :password, :email, :location, 
+            :interests, :experience) 
     end
-
 end
