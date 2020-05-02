@@ -7,17 +7,23 @@
 }
 
 .sign-up-header-login h1 {
-    position: center;
+    color: red;
+    text-align:center
 }
 
-.create-user-form {
+.sign-up-header-login ul {
+    text-align: center;
+
+}
+
+.user-information {
     border: 1px solid #F5F5F5;
     max-width: 900px;
     margin: 30px;
     position: left;
 }
 
-.create-user-form > {
+.user-information > {
     display: block;
-
 }
+
