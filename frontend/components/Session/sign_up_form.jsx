@@ -31,57 +31,72 @@ class SignUpForm extends React.Component {
     render() {
         return (
             <div>
-                <Link to="/">Community Home</Link>
-                <h1>Sign Up</h1>
-                <Link to="/login">Existing user? Sign in</Link>
-                <form onSubmit={this.handleSubmit}>
+
+                <div className="sign-up-nav-links">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <Link to="/">
+                         Community Home
+                   </Link>
+                </div>
+
+                <div className="sign-up-header-login">
+                    <h1>Sign Up</h1>
+                    <ul>
+                        <p>Existing User?</p>
+                        <Link to="/login">Sign in</Link>
+                    </ul>
+                    
+                </div>
+
+                <form className="create-user-form" onSubmit={this.handleSubmit}>
                     <label>Display Name
                         <input
                             type="text"
                             value={this.state.username}
                             onChange={this.update('username')}
                         />
-                    </label><br></br>
+                    </label>
                     <label>Email Address
                         <input
                             type="email"
                             value={this.state.email}
                             onChange={this.update('email')}
                         />
-                    </label><br></br>
+                    </label>
                     <label>Password
                         <input
                             type="password"
                             value={this.state.password}
                             onChange={this.update('password')}
                         />
-                    </label><br></br>
+                    </label>
                     <label>Confirm Password
                         <input
                             type="password"
                             value={this.state.confirmPassword}
                             onChange={this.update('confirmPassword')}
                         />
-                    </label><br></br>
+                    </label>
                     <label>Location
                         <input
                             type="text"
                             value={this.state.location}
                             onChange={this.update('location')}
                         />
-                    </label><br></br>
+                    </label>
                     <label>Interests
                         <textarea
                             value={this.state.interests}
                             onChange={this.update('interests')}
                         />
-                    </label><br></br>
+                    </label>
                     <label>Sailing Aspirations and History
-                        <textarea
+                        <input
+                            type="text"
                             value={this.state.experience}
                             onChange={this.update('experience')}
                         />
-                    </label><br></br>
+                    </label>
                     <input type="checkbox" id="newsUpdates" />
                     <label htmlFor='newsUpdates'>Send me news and updates</label><br></br>
 
