@@ -8,22 +8,29 @@
 
 .sign-up-header-login h1 {
     color: red;
-    text-align:center
+    text-align: center;
 }
 
 .sign-up-header-login ul {
     text-align: center;
+    display: flex;
+    justify-content: center;
 
 }
 
-.user-information {
+.user-form {
     border: 1px solid #F5F5F5;
     max-width: 900px;
     margin: 30px;
-    position: left;
+    position: center;
 }
-
+.user-form ul {
+    display: flex;
+    flex-direction: column;
+    margin:
+}
 .user-information > {
-    display: block;
+    display: flex;
+
 }
 
