@@ -30,59 +30,82 @@ class SignUpForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <div className="sign-up-nav-links"><Link to="/">Community Home </Link></div>
+            <div >
+                <div className="sign-up-page">
+                    <Link to="/">Community Home </Link>
+                </div>
                 
-                <div className="form-header">
-                    <div className="sign-up-header-login">
-                        <h1>Sign Up</h1>
+                <div className="sign-up-page">
+                    <h1>Sign Up </h1>
+                    <p>Existing User?</p><Link to="/login">Sign in</Link>
+                    
+                </div>
+
+                <div className="sign-up-page">
+                    <form onSubmit={this.handleSubmit}>
                         <ul>
-                            <p>Existing User?</p><Link to="/login">Sign in</Link>
-                        </ul>
-                    </div>
+                            <li>
+                                <label>Display Name</label>
+                                <input id="display-name" type="text" value={this.state.username} onChange={this.update('username')} />
+                            </li>
 
-                    <form className="user-form" onSubmit={this.handleSubmit}>
-                        <ul>
-                            <label>Display Name
-                                <input type="text" value={this.state.username} onChange={this.update('username')} />
-                            </label>
+                            <li>
+                                <label>Email Address
+                                <input id="email" type="email" value={this.state.email} onChange={this.update('email')} />
+                                </label>
+                            </li>
 
-                            <label>Email Address
-                                <input type="email"value={this.state.email} onChange={this.update('email')} /> 
-            
-                            </label>
-                            <label>Password
-                                <input type="password" value={this.state.password} onChange={this.update('password')} />
-                            </label>
+                            <li>
+                                <label>Password
+                                <input id="password" type="password" value={this.state.password} onChange={this.update('password')} />
+                                </label>
+                            </li>
 
-                            <label>Confirm Password
-                                <input type="password" value={this.state.confirmPassword} onChange={this.update('confirmPassword')} />
-                            </label>
+                            <li>
+                                <label>Confirm Password
+                                <input id="confirm-password" type="password" value={this.state.confirmPassword} onChange={this.update('confirmPassword')} />
+                                </label>
+                            </li>
 
-                            <label>Location
-                                <input type="text" value={this.state.location} onChange={this.update('location')} />
-                            </label>
+                            <li>
+                                <label>Location
+                                <input id="location" type="text" value={this.state.location} onChange={this.update('location')} />
+                                </label>
+                            </li>
 
-                            <label>Interests
-                                <textarea value={this.state.interests} onChange={this.update('interests')} />
-                            </label>
+                            <li>
+                                <label>Interests
+                                <textarea id="interests" value={this.state.interests} onChange={this.update('interests')} />
+                                </label>
+                            </li>
 
-                            <label>Sailing Aspirations and History
-                                <input type="text" value={this.state.experience} onChange={this.update('experience')} />
-                            </label>
-                            <input type="checkbox" id="newsUpdates" />
-                            <label htmlFor='newsUpdates'>Send me news and updates</label><br></br>
+                            <li>
+                                <label>Sailing Aspirations and History
+                                <input id="experience" type="text" value={this.state.experience} onChange={this.update('experience')} />
+                                </label>
+                            </li>
 
-                            <input type="checkbox" />
-                            <label htmlFor='checkbox'> Sign in anonymously</label>
+                            <li>
+                                <input type="checkbox" id="newsUpdates" />
+                                <label htmlFor='newsUpdates'>Send me news and updates</label><br></br>
+                            </li>
 
-                            <button onSubmit={this.handleSubmit}>Create my Account</button>
+                            <li>
+                                <input type="checkbox" />
+                                <label htmlFor='checkbox'> Sign in anonymously</label>
+                            </li>
+
+                            <li>
+                                <button onSubmit={this.handleSubmit}>Create my Account</button>
+                            </li>
                         </ul>
                     </form>
-                    <div>
-                        {this.props.errors}
-                    </div>
                 </div>
+                
+                <div>
+                    {this.props.errors}
+                </div>
+
             </div>
         )
     }
