@@ -1,3 +1,6 @@
+.sign-up-main {
+    
+}
 .sign-up-page {
     display: flex;
     flex-direction: row;
@@ -5,11 +8,23 @@
      width: 900px;
 }
 
-
-.user-form {
-    border: 1px solid #F5F5F5;
+.sign-up-form {
+    border: 2px solid #F5F5F5;
     max-width: 900px;
     margin: 30px;
-    padding: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
+
+.sign-up-form div {
+    padding: 5px;
+    margin-left: 50px;
+    width: 90%;
+}
+
+
+
 
