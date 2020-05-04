@@ -18,7 +18,6 @@ class LoginForm extends React.Component {
     }
     
     handleSubmit(e) {
-        // debugger 
         e.preventDefault();
         const user = Object.assign( {}, this.state);
         this.props.processForm(user)
@@ -26,37 +25,48 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <Link to="/">Community Home</Link>
-                <h1>Sign In!</h1>
-                <Link to="/signup">Don't have an account? Sign Up</Link>
+            <div classname="login-main-page">
 
-                <form onSubmit={this.handleSubmit}>
-                    <label> Display Name
-                        <br />
-                        <input
-                            type="text"
-                            value={this.state.username}
-                            onChange={this.update('username')}
-                        />
-                    </label><br></br>
-                    <label> Password
-                        <br />
+                <div className="login-page">
+                    <p>Sailing Sanctuary</p>
+                </div>
 
-                        <input
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                        />
-                    </label><br></br>
-                    <input type="checkbox" id="rememberMe" value="Remember Me"/>
-                    <label htmlFor='rememberMe'> Remember me</label><br></br>
+                <div className="login-page">
+                    <Link to="/">Community Home </Link>
+                </div>
+
+                <div className="login-page">
+                    <h1>Sign In </h1>
+                    <p> Don't have an account?</p>
+                    <Link to="/signup">Sign up</Link>
+                </div>
+
+                <form className="login-page" onSubmit={this.handleSubmit}>
+                    <div>
+                        <label> Display Name
+                            <input type="text" value={this.state.username} onChange={this.update('username')}/>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label> Password
+                            <input type="password" value={this.state.password} onChange={this.update('password')}/>
+                            <input type="checkbox" id="rememberMe" value="Remember Me"/>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label htmlFor='rememberMe'> Remember me</label>
+                    </div>
                     
-                    <input type="checkbox" id='checkbox'/>
-                    <label htmlFor='checkbox'> Sign in anonymously</label><br></br>
-                    <br/>
-                    <button onClick={this.handleSubmit}>Sign In</button>
-                    <button onSubmit={this.handleSubmit}>Log In Dummy User</button>
+                    <div>
+                        <input type="checkbox" id='checkbox'/>
+                        <label htmlFor='checkbox'> Sign in anonymously</label>
+                    </div>
+                    <div>
+                        <button onClick={this.handleSubmit}>Sign In</button>
+                        <button onSubmit={this.handleSubmit}>Log In Dummy User</button>
+                    </div>
                 </form>
             </div>
         )
