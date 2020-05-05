@@ -32,7 +32,7 @@ class SignUpForm extends React.Component {
         return (
             <div className='sign-up-main'>
                 <div className="sign-up-page-header">
-                    <h1>Sailing Sanctuary</h1>
+                    <Link to="/">Sailing Sanctuary</Link>
                 </div>
                 
                 <div className="sign-up-page-link">
