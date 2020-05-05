@@ -36,7 +36,7 @@ class SignUpForm extends React.Component {
                 </div>
                 
                 <div className="sign-up-page-link">
-                    <Link to="/">Community Home </Link>
+                    <Link to="/"> &lt; Community Home </Link>
                 </div>
                 
                 <div className="sign-up-page">

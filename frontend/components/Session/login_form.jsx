@@ -25,14 +25,14 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div classname="login-main">
+            <div className="login-main">
 
                 <div className="login-page-header">
                     <h1>Sailing Sanctuary</h1>
                 </div>
 
                 <div className="login-page-link">
-                    <Link to="/">Community Home </Link>
+                    <Link to="/"> &lt; Community Home </Link>
                 </div>
 
                 <div className="login-page">
@@ -47,16 +47,18 @@ class LoginForm extends React.Component {
 
                 <div className="login-page">
                     <div className="login-form-box">
-                        <form className="login-page-form" onSubmit={this.handleSubmit}>
+                        <form className="login-form" onSubmit={this.handleSubmit}>
 
                             <div>
-                                <label> Display Name</label>
-                                <input type="text" value={this.state.username} onChange={this.update('username')} />
+                                <label> Display Name  <span>REQUIRED</span></label>
+                                <input type="text" value={this.state.username} 
+                                onChange={this.update('username')} placeholder="Display Name" />
                             </div>
 
                             <div>
-                                <label>Password</label>
-                                <input type="password" value={this.state.password} onChange={this.update('password')} />
+                                <label>Password  <span>REQUIRED</span></label>
+                                <input type="password" value={this.state.password} 
+                                    onChange={this.update('password')} placeholder="Display Name" />
                             </div>
 
                             <div>
