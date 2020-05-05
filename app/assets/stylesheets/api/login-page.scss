@@ -1,9 +1,53 @@
 .login-main-page {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    min-width: 0;
+    justify-content: center;
 }
 
 .login-page {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
 }
+
+.login-page-header {
+    display: flex;
+    justify-content: flex-start;
+    height: 70px;
+    width: 100%;
+    background: #F0FFFF;
+    font-size: 55px;
+}
+
+.login-page-link {
+    display: block;
+    height: 45px;
+    width: 100%;
+    background-color: black;
+}
+
+.login-page-link a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.login-page-form-header {
+    display: flex;
+    flex-direction: column;
+    width: 968px;
+    height: 130px;
+    justify-content: flex-end;
+    align-items: center;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+}
+
+.login-page-form-header h1 {
+    font-size: 40px;
+    padding-bottom: 10px;
+ }

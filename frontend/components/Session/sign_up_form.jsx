@@ -31,16 +31,12 @@ class SignUpForm extends React.Component {
     render() {
         return (
             <div className='sign-up-main'>
-                <div className="sign-up-page">
-                    <div className="sign-up-page-header">
-                        <h1>Sailing Sanctuary</h1>
-                    </div>
+                <div className="sign-up-page-header">
+                    <h1>Sailing Sanctuary</h1>
                 </div>
-
-                <div className="sign-up-page">
-                    <div className="sign-up-page-link">
-                        <Link to="/">Community Home </Link>
-                    </div>
+                
+                <div className="sign-up-page-link">
+                    <Link to="/">Community Home </Link>
                 </div>
                 
                 <div className="sign-up-page">
@@ -58,38 +54,43 @@ class SignUpForm extends React.Component {
                         <form className="sign-up-form" onSubmit={this.handleSubmit}>
                             
                             <div>
-                                <label for='display-name'> Display Name * </label>
+                                <span for='display-name'> Display Name </span>
+                                <span className="span-red"> * </span>
                                 <input id="display-name" type="text" value={this.state.username} onChange={this.update('username')} />
                             </div>
                             
                             <div>
-                                <label for='email'>EmailAddress</label>
+                                <span for='email'>Email Address</span>
+                                <span className="span-red"> * </span>
                                 <input id="email" type="email" value={this.state.email} onChange={this.update('email')} />
                             </div>
 
                             <div>
-                                <label for='password'>Password* </label>
+                                <span for='password'>Password  </span>
+                                <span className="span-red"> * </span>
                                 <input id="password" type="password" value={this.state.password} onChange={this.update('password')} />
                             </div>
 
                             <div>
-                                <label for='confirm-password'>ConfirmPassword* </label>
+                                <span for='confirm-password'>Confirm Password </span>
+                                <span className="span-red"> * </span>
                                 <input id="confirm-password" type="password" value={this.state.confirmPassword} onChange={this.update('confirmPassword')} />
                             </div>
                             
                             <div>
-                                <label for='location'>Location </label>
+                                <span for='location'>Location </span>
                                 <input id="location" type="text" value={this.state.location} onChange={this.update('location')} />
                             </div>
                             
                             
-                            <div>
+                            <div className="form-interests">
                                 <label for='interests'>Interests </label>
-                                <textarea id="interests" value={this.state.interests} onChange={this.update('interests')} />
+                                <textarea rows="4" cols="55" id="interests" value={this.state.interests} onChange={this.update('interests')} />
                             </div>
                             
                             <div>
-                                <label for='experience'>Sailing_Aspirations and_History* </label>
+                                <span for='experience'>Sailing Aspirations and History  </span>
+                                <span className="span-red"> * </span>
                                 <input id="experience" type="text" value={this.state.experience} onChange={this.update('experience')} />
                             </div>
                             

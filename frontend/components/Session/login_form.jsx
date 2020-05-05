@@ -25,49 +25,48 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div classname="login-main-page">
+            <div classname="login-main">
 
-                <div className="login-page">
-                    <p>Sailing Sanctuary</p>
+                <div className="login-page-header">
+                    <h1>Sailing Sanctuary</h1>
                 </div>
 
-                <div className="login-page">
+                <div className="login-page-link">
                     <Link to="/">Community Home </Link>
                 </div>
 
                 <div className="login-page">
-                    <h1>Sign In </h1>
-                    <p> Don't have an account?</p>
-                    <Link to="/signup">Sign up</Link>
+                    <div className="login-page-form-header">
+                        <h1>Sign In</h1>
+                        <div>
+                            <span>Don't have an account?</span>
+                            <Link to="/signup">Sign Up</Link>
+                        </div>
+                    </div>
                 </div>
 
-                <form className="login-page" onSubmit={this.handleSubmit}>
-                    <div>
-                        <label> Display Name
-                            <input type="text" value={this.state.username} onChange={this.update('username')}/>
-                        </label>
-                    </div>
+                <div className="login-page">
+                    <div className="login-form-box">
+                        <form className="login-page-form" onSubmit={this.handleSubmit}>
 
-                    <div>
-                        <label> Password
-                            <input type="password" value={this.state.password} onChange={this.update('password')}/>
-                            <input type="checkbox" id="rememberMe" value="Remember Me"/>
-                        </label>
-                    </div>
+                            <div>
+                                <label> Display Name</label>
+                                <input type="text" value={this.state.username} onChange={this.update('username')} />
+                            </div>
 
-                    <div>
-                        <label htmlFor='rememberMe'> Remember me</label>
+                            <div>
+                                <label>Password</label>
+                                <input type="password" value={this.state.password} onChange={this.update('password')} />
+                            </div>
+
+                            <div>
+                                <button onClick={this.handleSubmit}>Sign In</button>
+                                <button onSubmit={this.handleSubmit}>Log In Dummy User</button>
+                            </div>
+
+                        </form>
                     </div>
-                    
-                    <div>
-                        <input type="checkbox" id='checkbox'/>
-                        <label htmlFor='checkbox'> Sign in anonymously</label>
-                    </div>
-                    <div>
-                        <button onClick={this.handleSubmit}>Sign In</button>
-                        <button onSubmit={this.handleSubmit}>Log In Dummy User</button>
-                    </div>
-                </form>
+                </div>
             </div>
         )
     }
