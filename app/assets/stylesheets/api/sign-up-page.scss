@@ -55,6 +55,7 @@
 
  .sign-up-page-form-header div {
     display: block;
+    color: grey;
     padding-bottom: 12px;
  }
 
@@ -76,7 +77,7 @@
 
 .sign-up-form {
     display: flex;
-    border: 1px rgb(173, 167, 167) solid;
+    border: 1px rgb(99, 98, 98) solid;
     border-radius: 2px;
     width: 620px;
     height: 725px;
@@ -103,7 +104,7 @@
 }
 
 .span-red {
-    padding-left: 10px;
+    margin-left: 10px;
     color: red;
 }
 
