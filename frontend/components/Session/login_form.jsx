@@ -26,11 +26,11 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div className="login-main">
-
+                
                 <div className="login-page-header">
-                    <h1>Sailing Sanctuary</h1>
+                    <Link to="/">Sailing Sanctuary</Link>
                 </div>
-
+           
                 <div className="login-page-link">
                     <Link to="/"> &lt; Community Home </Link>
                 </div>
@@ -58,7 +58,7 @@ class LoginForm extends React.Component {
                             <div>
                                 <label>Password  <span>REQUIRED</span></label>
                                 <input type="password" value={this.state.password} 
-                                    onChange={this.update('password')} placeholder="Display Name" />
+                                    onChange={this.update('password')} placeholder="Password" />
                             </div>
 
                             <div>

@@ -16,13 +16,16 @@ class Greeting extends React.Component {
     render() {
         if (!!this.props.currentUser) {
             return (
-                <div className='personal-greeting'>
-                    <h1>Sailing Anarchy</h1>
+                <div className='greeting-header'>
+                    <div className='greeting-logo'>
+                        <Link to="/">Sailing Sanctuary</Link>
+                    </div>
 
-                    <div className="session-dropdown">
-                        <button className="session-dropbtn">{this.props.currentUser.username}
-                            <i className="fa fa-caret-down"></i>
-                        </button>
+                    <div className="greeting-dropdown">
+                        <div>
+                            <button className="greeting-dropbtn">{this.props.currentUser.username}</button>
+                        </div>
+                        
                         <div className="dropdown-content">
                             <ul className="SessionLinks">
                                 <li className="signout">
@@ -35,12 +38,15 @@ class Greeting extends React.Component {
             )
         } else {
             return(
-                <div>
-                    <h1>Sailing Anarchy 2.0 </h1>
-                    <nav className="login-signup">
-                        <Link to="/login">Existing user? Sign In </Link>
-                        <Link to='/signup'>Sign Up</Link>
-                    </nav>
+                <div className="greeting-header">
+                    <div className='greeting-logo'>
+                        <Link to="/">Sailing Sanctuary</Link>
+                    </div>
+
+                    <div className="greeting-nav">
+                        <Link className='greeting-nav-login' to="/login">Existing user? Sign In </Link>
+                        <Link className='greeting-nav-signup' to='/signup'>Sign Up</Link>
+                    </div>
                 </div>
             )
         }

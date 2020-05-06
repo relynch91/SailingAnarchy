@@ -1,0 +1,44 @@
+.greeting-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    min-width: 716px;
+    border: 1px solid white;
+    background: #F0FFFF;
+}
+
+.greeting-logo {
+    display: flex;
+    color: blue;
+    font-size: 55px;
+    margin-left: 15px;
+}
+
+.greeting-nav {
+    display: flex;
+    align-items: center;
+}
+
+.greeting-logo a {
+    text-decoration: none;
+}
+
+.greeting-nav-login {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+.greeting-nav-signup {
+    border-radius: 3px;
+    border: 1px black solid;
+    font-size: 14px;
+    color: white;
+    background-color: black;
+    padding: 10px 24px;
+    margin: 25px;
+    text-decoration: none;
+}

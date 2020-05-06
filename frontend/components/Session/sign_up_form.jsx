@@ -41,7 +41,7 @@ class SignUpForm extends React.Component {
                 
                 <div className="sign-up-page">
                     <div className="sign-up-page-form-header">
-                        <h1>Sign Up </h1>
+                        <h1>Sign Up</h1>
                         <div>
                             <span> Existing User? </span>
                             <Link to="/login">Sign in</Link>
