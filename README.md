@@ -14,7 +14,14 @@ ________________________________________________________________________________
 Here is a screenshot of the home forums page:
 
 
-![alt text](https://github.com/relynch91/SailingAnarchy/blob/master/pic_wide.png?raw=true "Logo Title Text 1")
+![alt text](https://github.com/relynch91/SailingAnarchy/blob/master/pic_wide.png?raw=true "Home Page Wide")
+
+As the main function of the site is to provide an online forum platform for users, scalabilty across multiple types of media screens is extremely important.  Users need to be able to make and respond to forms that are scalable across a wide variety of screen sizes.  A good deal time was utilized to understanding and developing a working flexbox model for the main application features.  It is important that screens appropriately display all field titles and associating text boxes in an ordealy fashion across a number of different screen sizes.
+
+Here is the same page but with a smaller screen window:
+
+![alt text](https://github.com/relynch91/SailingAnarchy/blob/master/pic_narrow.png?raw=true "Home Page Narrow")
+
 
 
 
