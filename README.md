@@ -6,5 +6,6 @@
 The app utilizes React Redux in the Frontend to be able to maintain and update state for platform. In the backend, Rails Version 5.2.4.2 is used to orchestrate the Model and Controller portions of the MVC Framework.  Lastly, PostgreSQL is used as the database management system for the app. 
 
 As development is ongoing, the current version only allows for users to sign-up, login, and logout.
+____________________________________________________________________________________________________
 
-
+Current Entry Page:
