@@ -8,6 +8,11 @@
 As development is ongoing, the current version only allows for users to sign-up, login, and logout.
 _______________________________________________________________________________________________________
 
+Here is a screenshot of the home forums page:
+
+
+![alt text](https://github.com/relynch91/SailingAnarchy/blob/master/SailingSanctuaryHome.png?raw=true "Logo Title Text 1")
+
 
 Technologies Implemented:
 
