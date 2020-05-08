@@ -29,7 +29,10 @@
 }
 
 .sign-up-page-link {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
     height: 45px;
     width: 100%;
     border-style: solid;

@@ -63,7 +63,7 @@ class LoginForm extends React.Component {
 
                             <div>
                                 <button onClick={this.handleSubmit}>Sign In</button>
-                                <button onSubmit={this.handleSubmit}>Log In Dummy User</button>
+                                {/* <button onSubmit={this.handleSubmit}>Log In Dummy User</button> */}
                             </div>
 
                         </form>
