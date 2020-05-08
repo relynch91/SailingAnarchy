@@ -14,7 +14,7 @@ ________________________________________________________________________________
 Here is a screenshot of the home forums page:
 
 
-![alt text](https://github.com/relynch91/SailingAnarchy/blob/master/SailingSanctuaryHome.png?raw=true "Logo Title Text 1")
+![alt text](https://github.com/relynch91/SailingAnarchy/blob/master/pic_wide.png?raw=true "Logo Title Text 1")
 
 
 
